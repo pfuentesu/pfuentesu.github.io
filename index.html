@@ -36,21 +36,11 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
  <head>
       <script>
-      function change()
-      {
-      document.getElementById("myButton1").value="Downloaded"; 
-      }
-    </script>      
-   
-   <script>
-// Get the button, and when the user clicks on it, execute myFunction
-document.getElementById("myBtn").onclick = function() {myFunction()};
-
-/* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-</script>
+        function myFunction() {
+        alert("Thank you for getting in touch with me! I will try and get back contact with you as soon as possible.");
+        }
+      </script>    
+  
    
   </head>
 
@@ -107,15 +97,7 @@ function myFunction() {
   <!-- About Section -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
     <h2 class="w3-text-light-grey">About me:</h2>
-    
-    <div class="dropdown">
-  <button id="myBtn" class="dropbtn">Dropdown</button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </div>
-</div>
+
     <hr style="width:200px" class="w3-opacity">
   
     <p> I am a MASc. Telecommunications Engineer currently researching Quantum Error Correction for my PhD thesis at Tecnun - University of Navarra. 
@@ -176,7 +158,7 @@ function myFunction() {
       <div class="w3-dark-grey" style="height:28px;width:65%"></div>
     </div><br>
 
-    <button onclick="change()" class="w3-button w3-light-grey w3-padding-large w3-section" id="myButton1">
+    <button onclick="myFunction()" class="w3-button w3-light-grey w3-padding-large w3-section" id="myButton1">
          <a href="CV.pdf" download="PfuentesCV">Download CV</a>                                   
     </button>                                           
                                                                              
