@@ -39,13 +39,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   
   
 <body class="w3-black">
-  
-  <script>
-    function change()
-    {
-    document.getElementById("myButton1").value="Downloaded"; 
-    }
-  </script>
+ 
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
@@ -155,11 +149,16 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <div class="w3-dark-grey" style="height:28px;width:65%"></div>
     </div><br>
 
-    <button class="w3-button w3-light-grey w3-padding-large w3-section" id="myButton1">
+    <button onclick="change()" class="w3-button w3-light-grey w3-padding-large w3-section" id="myButton1">
          <a href="CV.pdf" download="PfuentesCV">Download CV</a>                                   
-    </button>
-   <input onclick="change()" type="button" value="Downloaded" id="myButton1" />                                               
-                                               
+    </button>                                           
+           
+      <script>
+      function change()
+      {
+      document.getElementById("myButton1").value="Downloaded"; 
+      }
+    </script>                                                                        
     
     <!-- Grid for pricing tables -->
     <h3 class="w3-padding-16 w3-text-light-grey">My Price</h3>
