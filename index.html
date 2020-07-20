@@ -32,46 +32,20 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   transform: translate(-50%, -50%);
   color: white;
 }
-</style>
-  
-  function changeText(el, dText, nText) {
-  var content = '',
-      context = '';
-  
-  /**
-   * Set the text of a button
-   *     - dependant upon current text
-   **/
-  function setText() {
-    return (content === dText) ? nText : dText;
-  }
-  
-  /* Check to see if the browser accepts textContent */
-  if ('textContent' in document.body) {
-    context = 'textContent';
-    /* Get the current button text */
-    content = el[context];
-  /* Browser does NOT use textContent */
-  } else {
-    /* Get the button text with fallback option */
-    content = el.firstChild.nodeValue;
-  }
-  
-  /* Set button text */
-  if (context === 'textContent') {
-    el.textContent = setText();
-  } else {
-    el.firstChild.nodeValue = setText();
-  }
-}
+  </style>
 
-var defaultText,
-    substituteText,
-    btn;
+ 
 
   
   
 <body class="w3-black">
+  
+  <script>
+    function change()
+    {
+    document.getElementById("myButton1").value="Downloaded"; 
+    }
+  </script>
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
@@ -122,17 +96,6 @@ var defaultText,
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
     <h2 class="w3-text-light-grey">About me:</h2>
     <hr style="width:200px" class="w3-opacity">
-    /* Default text of the button */
-defaultText = 'Change';
-/* Alternate text for button */
-substituteText = 'Revert';
-/* Grab our button */
-btn = document.querySelector('.btn');
-
-/* Add a listener to the button instance so we can manipulate it */
-btn.addEventListener('click', function() {
-  changeText(this, defaultText, substituteText);
-}, false);
   
     <p> I am a MASc. Telecommunications Engineer currently researching Quantum Error Correction for my PhD thesis at Tecnun - University of Navarra. 
       Deeply interested in the fields of both classical and quantum Channel Coding and Information Theory.     </p>
@@ -192,9 +155,11 @@ btn.addEventListener('click', function() {
       <div class="w3-dark-grey" style="height:28px;width:65%"></div>
     </div><br>
 
-    <button class="w3-button w3-light-grey w3-padding-large w3-section">
-         <a href="CV.pdf" download="PfuentesCV">Download CV</a>
+    <button class="w3-button w3-light-grey w3-padding-large w3-section" id="myButton1">
+         <a href="CV.pdf" download="PfuentesCV">Download CV</a>                                   
     </button>
+   <input onclick="change()" type="button" value="Downloaded" id="myButton1" />                                               
+                                               
     
     <!-- Grid for pricing tables -->
     <h3 class="w3-padding-16 w3-text-light-grey">My Price</h3>
